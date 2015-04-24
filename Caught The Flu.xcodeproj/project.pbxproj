@@ -14,6 +14,7 @@
 		C949B3A71AEA53AC00283C88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C949B3A61AEA53AC00283C88 /* Images.xcassets */; };
 		C949B3AA1AEA53AC00283C88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C949B3A81AEA53AC00283C88 /* LaunchScreen.xib */; };
 		C949B3B61AEA53AC00283C88 /* Caught_The_FluTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C949B3B51AEA53AC00283C88 /* Caught_The_FluTests.m */; };
+		C949B3D11AEA540F00283C88 /* libLibInfected.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C949B3CE1AEA53F900283C88 /* libLibInfected.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +24,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = C949B3951AEA53AC00283C88;
 			remoteInfo = "Caught The Flu";
+		};
+		C949B3CD1AEA53F900283C88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C949B3C81AEA53F900283C88 /* LibInfected.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C927211B1AE9D9070071148C;
+			remoteInfo = LibInfected;
+		};
+		C949B3CF1AEA53F900283C88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C949B3C81AEA53F900283C88 /* LibInfected.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C92721261AE9D9070071148C;
+			remoteInfo = LibInfectedTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +55,7 @@
 		C949B3AF1AEA53AC00283C88 /* Caught The FluTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Caught The FluTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C949B3B41AEA53AC00283C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C949B3B51AEA53AC00283C88 /* Caught_The_FluTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Caught_The_FluTests.m; sourceTree = "<group>"; };
+		C949B3C81AEA53F900283C88 /* LibInfected.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LibInfected.xcodeproj; path = ../LibInfected/LibInfected.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C949B3D11AEA540F00283C88 /* libLibInfected.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 		C949B38D1AEA53AC00283C88 = {
 			isa = PBXGroup;
 			children = (
+				C949B3C81AEA53F900283C88 /* LibInfected.xcodeproj */,
 				C949B3981AEA53AC00283C88 /* Caught The Flu */,
 				C949B3B21AEA53AC00283C88 /* Caught The FluTests */,
 				C949B3971AEA53AC00283C88 /* Products */,
@@ -119,6 +137,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C949B3C91AEA53F900283C88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C949B3CE1AEA53F900283C88 /* libLibInfected.a */,
+				C949B3D01AEA53F900283C88 /* LibInfectedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +195,11 @@
 				TargetAttributes = {
 					C949B3951AEA53AC00283C88 = {
 						CreatedOnToolsVersion = 6.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					C949B3AE1AEA53AC00283C88 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -186,6 +218,12 @@
 			mainGroup = C949B38D1AEA53AC00283C88;
 			productRefGroup = C949B3971AEA53AC00283C88 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C949B3C91AEA53F900283C88 /* Products */;
+					ProjectRef = C949B3C81AEA53F900283C88 /* LibInfected.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C949B3951AEA53AC00283C88 /* Caught The Flu */,
@@ -193,6 +231,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C949B3CE1AEA53F900283C88 /* libLibInfected.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLibInfected.a;
+			remoteRef = C949B3CD1AEA53F900283C88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C949B3D01AEA53F900283C88 /* LibInfectedTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LibInfectedTests.xctest;
+			remoteRef = C949B3CF1AEA53F900283C88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C949B3941AEA53AC00283C88 /* Resources */ = {
