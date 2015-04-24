@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SV3-hO-1iI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Caught the Flu-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -17,28 +18,74 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eZ2-hf-7Xu">
-                                <rect key="frame" x="237" y="286" width="127" height="29"/>
+                                <rect key="frame" x="74" y="129" width="452" height="29"/>
                                 <segments>
                                     <segment title="Healthy"/>
-                                    <segment title="Infected"/>
+                                    <segment title="Sick"/>
                                 </segments>
                                 <connections>
-                                    <action selector="healthyInfectedChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="2br-uE-tZ2"/>
+                                    <action selector="feelingChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ss3-ka-Y9J"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-BN-DnM">
+                                <rect key="frame" x="219" y="93" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposed?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uni-dJ-LI9">
+                                <rect key="frame" x="262" y="236" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs1-Rp-grR">
+                                <rect key="frame" x="289" y="265" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="eZ2-hf-7Xu" secondAttribute="centerY" id="RXb-mM-WWw"/>
-                            <constraint firstAttribute="centerX" secondItem="eZ2-hf-7Xu" secondAttribute="centerX" id="aj6-OM-DX1"/>
+                            <constraint firstItem="xs1-Rp-grR" firstAttribute="top" secondItem="Uni-dJ-LI9" secondAttribute="bottom" constant="8" symbolic="YES" id="4k4-yO-Dp4"/>
+                            <constraint firstItem="hNG-BN-DnM" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="B6A-aD-s2G"/>
+                            <constraint firstItem="Uni-dJ-LI9" firstAttribute="top" secondItem="eZ2-hf-7Xu" secondAttribute="bottom" constant="79" id="Cbu-zJ-zxV"/>
+                            <constraint firstItem="eZ2-hf-7Xu" firstAttribute="centerX" secondItem="Uni-dJ-LI9" secondAttribute="centerX" id="D82-3O-ybY"/>
+                            <constraint firstItem="eZ2-hf-7Xu" firstAttribute="centerX" secondItem="hNG-BN-DnM" secondAttribute="centerX" id="FE8-wT-QwY"/>
+                            <constraint firstItem="hNG-BN-DnM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="29" id="Ge2-Ln-ddS"/>
+                            <constraint firstItem="eZ2-hf-7Xu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="58" id="YG0-Ee-hBd"/>
+                            <constraint firstItem="Uni-dJ-LI9" firstAttribute="centerX" secondItem="xs1-Rp-grR" secondAttribute="centerX" id="ZxM-Gv-8b1"/>
+                            <constraint firstItem="eZ2-hf-7Xu" firstAttribute="top" secondItem="hNG-BN-DnM" secondAttribute="bottom" constant="15" id="u4D-mS-1uZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Caught the Flu" id="YjB-Yo-qBs"/>
                     <connections>
+                        <outlet property="exposedLabel" destination="xs1-Rp-grR" id="OO3-sX-0ai"/>
                         <outlet property="healthyInfectedSegment" destination="eZ2-hf-7Xu" id="Pap-Xs-qaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1336" y="299"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sji-TD-QnB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SV3-hO-1iI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBq-eU-qgn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="EH5-28-y3k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdG-dd-tbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="277"/>
         </scene>
     </scenes>
 </document>
